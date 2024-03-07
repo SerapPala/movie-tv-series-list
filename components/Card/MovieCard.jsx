@@ -65,7 +65,7 @@ const MovieCard = ({type, movie, dataType}) => {
                         />
                     )}
                     {!movie?.poster_path && (
-                        <div>
+                        <div className={"no-image-poster-movie-card"}>
                             {movie ? 'no poster available' : 'Loading ...'}
                         </div>
                     )}
