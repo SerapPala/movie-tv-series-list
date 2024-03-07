@@ -35,10 +35,17 @@ position:relative;
   }
 }
 /* Media query for mobile devices */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 475px) and (max-width: 1024px) {
   .movie-card {
     &__body{
       img{
         height: 333px;
+      }}}
+}
+@media only screen and (max-width: 475px)  {
+  .movie-card {
+    &__body{
+      img{
+        height: 380px;
       }}}
 }
