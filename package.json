@@ -1,0 +1,29 @@
+{
+  "name": "movies",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev":"next dev && sass --watch --update --style=expanded styles/scss:styles/css",
+    "build":"npm run build:scss && next build",
+    "start":"next start",
+    "lint":"next lint",
+    "build:scss": "sass styles/scss:styles/css --style=expanded"
+  },
+  "dependencies": {
+    "@types/react-dom": "^18.2.20",
+    "@types/react-slick": "^0.23.13",
+    "autoprefixer": "^10.4.18",
+    "next": "^14.1.2",
+    "node-sass": "npm:sass@^1.71.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-slick": "^0.30.2",
+    "sass": "^1.71.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.24",
+    "@types/react": "18.2.63",
+    "typescript": "5.3.3"
+  }
+}
