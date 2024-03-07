@@ -3,6 +3,28 @@ import React from 'react';
 import Link from "next/link";
 
 const Navbar = () => {
+    
+   //#region scroll Navigation function
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const headerNav = document.querySelector('.nav');
+            if (window.scrollY > 60) {
+                headerNav.classList.add('scrolled');
+            } else {
+                headerNav.classList.remove('scrolled');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+    
+    //#endregion
+
 
     return (
             <div className={"nav"}>
