@@ -14,3 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Next.js(React) 
 - CSS (SCSS)
 - Javacript
+
+
+https://movie-tv-series-list.vercel.app/
