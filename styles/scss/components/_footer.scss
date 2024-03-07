@@ -1,0 +1,29 @@
+footer {
+  background:$purple58;
+}
+.footer {
+  &__content {
+   @include flexBetweeen;
+    height: 75px;
+    .designer {
+      color: $white;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+    }
+    .social {
+      ul {
+        display: flex;
+        gap:28px;
+        li{
+          a{
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

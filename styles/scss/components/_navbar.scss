@@ -1,0 +1,79 @@
+.nav{
+  position: fixed;
+  left:0;
+  right: 0;
+  top:105px;
+  z-index: 99999999!important;
+}
+.header__nav{
+
+&__content {
+  transition: top 0.1s ease-in-out;
+  border-radius: 4px;
+  z-index: 9999999;
+  backdrop-filter: blur(25px);
+  background: linear-gradient(90.00deg, rgba(255, 255, 255, 0.63), rgba(255, 255, 255, 0) 100%);
+  margin-right: 45px;
+  margin-left: 45px;
+
+ &__container{
+   padding:0px 22.5px;
+   @include  flexBetweeen;
+   height: 50px;
+
+   align-items: center;
+   &__left{
+
+     span {
+       color: rgb(36, 18, 58);
+       font-size: 25px;
+       font-weight: 500;
+       line-height: 30px;
+     }
+   }
+   &__left img {
+     width:50px;
+     height:auto;
+   }
+   &__right{
+     ul{
+       display:flex;
+       gap:28px;
+       list-style: none;
+       li a{
+         color: rgb(112, 124, 180);
+         font-size: 16px;
+         font-weight: 500;
+         line-height: 20px;
+         text-align: center;
+       }
+     }
+   }
+  }
+
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .header__nav__content {
+    margin:0px;
+    background: linear-gradient(40.00deg, rgba(255, 255, 255, 0.33),rgba(255, 255, 255, 0) 100%);
+    &__container {
+      padding: 0px;
+      width: 100%;
+    }
+  }    .nav{
+         top:0!important;
+         right: 0;
+         left: 0;
+         margin-right: 0px;
+         margin-left: 0px;
+       }
+
+}
+
+.nav.scrolled {
+  top:0!important;
+}
+
+
