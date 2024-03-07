@@ -60,7 +60,7 @@ export default function SimpleSlider() {
         pagination: true,
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
                 },
