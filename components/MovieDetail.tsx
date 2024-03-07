@@ -67,7 +67,7 @@ const MovieDetail = ({data}) => {
                         {data?.original_title}
                     </h1>
                     <ul className={"detail__genres"}>
-                        {data.genres.map((genre: {
+                        {data?.genres?.map((genre: {
                             id: React.Key | null | undefined;
                             name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined;
                         }) => (
@@ -81,12 +81,12 @@ const MovieDetail = ({data}) => {
                 <div className="detail">
                     <div>
                         <div>
-                            {data.overview}
+                            {data?.overview}
                         </div>
 
                         <div className="read-more-link">
                             <div>
-                                {data.release_date}
+                                {data?.release_date}
                             </div>
                         </div>
                     </div>
