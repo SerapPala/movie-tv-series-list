@@ -94,13 +94,14 @@ h1 {
   }}
 @media only screen and (max-width: 475px) {
   .section {
-    padding:  45px 0px 45px 0px;
-
+    padding:  60px 0px 0px 0px;
   }
+  .section-content {
+      margin:90px 0px;
+    }
   .content-container {
     margin:0px 0px;
   }}
-
 button{
   border:none!important;
   cursor: pointer;
