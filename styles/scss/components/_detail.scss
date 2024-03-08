@@ -14,7 +14,7 @@ border-radius:$borderRadiusContent;
     width: 100%;
     @include  flexBetweeen;
     gap: 10px;
-max-width: 950px;
+    max-width: 950px;
     margin-bottom:45px;
     &__genre {
       background: $purple180;
@@ -150,7 +150,7 @@ a{
   .detail-section{
     &__image{
       height: 340px;
-      margin-top:22.5px;
+
     }
   }
   .detail{
