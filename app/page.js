@@ -105,8 +105,8 @@ export default function SimpleSlider() {
                      </h2>
                      <Slider {...SliderSettings}>
                          {popularMovies?.map(movie => (
-                             <div key={movie.id} className="slider-item">
-                                 <MovieCard movie={movie}/>
+                             <div key={movie.id} className="slider-item"  >
+                                 <MovieCard movie={movie} dataType={"popularMovies"}/>
                              </div>
                          ))}
                      </Slider>
@@ -117,8 +117,8 @@ export default function SimpleSlider() {
                      </h2>
                      <Slider {...SliderSettings}>
                          {popularTvSeries?.map(series => (
-                             <div key={series.id} className="slider-item">
-                                 <MovieCard movie={series}/>
+                             <div key={series.id} className="slider-item" >
+                                 <MovieCard movie={series} dataType={"popularTvSeries"}/>
                              </div>
                          ))}
                      </Slider>
