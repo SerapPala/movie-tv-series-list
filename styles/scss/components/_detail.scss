@@ -11,20 +11,21 @@ border-radius:$borderRadiusContent;
   justify-content: space-between;
   gap:45px;
   &__genres {
-    width: 100%;
-    @include  flexBetweeen;
+
+    @include  flexStart;
     gap: 10px;
-    max-width: 950px;
+
     margin-bottom:45px;
     &__genre {
       background: $purple180;
       color: $white;
+
       padding: 10px 23px;
       border-radius: 4px 4px 0px 0px;
       display: flex;
       align-items: center;
       gap: 10px;
-      width: 100%;
+
       @include  flexCenter;
       &__icon {
         width: 30px;
