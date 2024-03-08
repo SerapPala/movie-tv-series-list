@@ -2,7 +2,7 @@
 import React, {useEffect} from 'react';
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({type}) => {
 
    //#region scroll Navigation function
 
@@ -25,15 +25,16 @@ const Navbar = () => {
 
     //#endregion
 
-
-    function handleClick() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
+    //#region detail page navbar function
+    
+    const addLeadingSlash = (href) => {
+        if (type === "detail" && href.startsWith("#")) {
+            return "/" + href;
         }
-    }
+        return href;
+    };
+    
+    //#endregion
 
     return (
         <div style={{position:"relative"}}>
@@ -49,8 +50,10 @@ const Navbar = () => {
                                     </div>
                                     <div className={"header__nav__content__container__right"}>
                                         <ul>
-                                            <li><Link href={"#popular-tv-series"}>Popular TV Series</Link></li>
-                                            <li><Link href={"#popular-movies"}>Popular Movies</Link></li>
+                                            <li><Link legacyBehavior href={addLeadingSlash("#popular-tv-series")}><a>Popular TV
+                                                Series</a></Link></li>
+                                            <li><Link legacyBehavior href={addLeadingSlash("#popular-movies")}><a>Popular
+                                                Movies</a></Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -69,8 +72,8 @@ const Navbar = () => {
                     <div className='menu-button'></div>
                 </label>
                 <ul className="menu">
-                    <li><Link  href={"#popular-tv-series"}>Popular TV Series</Link></li>
-                    <li><Link  href={"#popular-movies"}>Popular Movies</Link></li>
+                    <li><Link legacyBehavior href={addLeadingSlash("#popular-tv-series")}><a>Popular TV Series</a></Link></li>
+                    <li><Link legacyBehavior href={addLeadingSlash("#popular-movies")}><a>Popular Movies</a></Link></li>
                 </ul>
             </div>
         </div>
