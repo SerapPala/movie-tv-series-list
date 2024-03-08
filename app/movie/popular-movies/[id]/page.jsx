@@ -39,7 +39,7 @@ const Page = async ({ params }) => {
     return (
         <section className={"content-container"}>
   <div className={"detail_nav"}>
-                <Navbar />
+                <Navbar  type={"detail"}  />
             </div>
             <MovieDetail data={data} />
         </section>
