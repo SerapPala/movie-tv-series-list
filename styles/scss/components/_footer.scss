@@ -3,8 +3,6 @@ footer {
 }
 .footer {
   &__content {
-    margin-left:45px;
-    margin-right: 45px;
    @include flexBetweeen;
     height: 75px;
     .designer {
