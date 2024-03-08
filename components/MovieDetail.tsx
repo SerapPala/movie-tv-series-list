@@ -86,10 +86,10 @@ const MovieDetail = ({data}) => {
                             <ul className="breadcrumb">
                                 <li><a href="/">Home</a></li>
                                 &nbsp; / &nbsp;
-                                <li className={"breadcrumb__active"}> {data?.original_title}</li>
+                                <li className={"breadcrumb__active"}> {data?.original_title ? data?.original_title : data?.title ? data?.title :data?.name  }</li>
                             </ul>
                             <h1 className="title-lg-bold">
-                                {data?.original_title}
+                                {data?.original_title ? data?.original_title : data?.title ? data?.title :data?.name  }
                             </h1>
                             <div className="read-more-link">
                                 {data?.release_date}
