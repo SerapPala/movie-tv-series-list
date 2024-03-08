@@ -122,65 +122,76 @@ const MovieDetail = ({data}) => {
                     {data?.production_companies?.length >= 1 && <h2>
                         Production Companies
                     </h2>}
-                    {data?.production_companies?.length > 3 &&
-                        <ul className={"read-more-list-ul"}>
-                            <Slider {...SliderSettings}>
-                                {data.production_companies.map((company: {
-                                    id: React.Key | null | undefined;
-                                    logo_path: any;
-                                    name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined;
-                                }) => (
-                                    <li key={company.id} className={"read-more-list-li"}>
-                                        {company?.logo_path && (
-                                            <img
-                                                src={`https://image.tmdb.org/t/p/w400/${company?.logo_path}`}
-                                                alt="logo-image"
-                                                className="rounded"
-                                                width={112}
-                                                height={68}
-                                            />
-                                        )}
-                                        {!company?.logo_path && (
-                                            <div className={"no-image"}>
-                                                {company ? 'no poster available' : 'Loading ...'}
-                                            </div>
-                                        )}
-                                        <div className={"read-more-list-li-a"}>    {company.name}</div>
-                                    </li>
-                                ))
-                                }
-                            </Slider>
-                            <div
-                                className={"not-data"}>  {data.production_companies.length <= 0 && " Not yet available.."}</div>
-                        </ul>
-                    }
-                    {data?.production_companies?.length <= 3 &&
-                        <ul className={"read-more-list-ul company-list"}>
-                            {data.production_companies.map((company: {
-                                id: React.Key | null | undefined;
-                                logo_path: any;
-                                name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined;
-                            }) => (
-                                <li key={company.id} className={"read-more-list-li"}>
-                                    {company?.logo_path && (
-                                        <img
-                                            src={`https://image.tmdb.org/t/p/w400/${company?.logo_path}`}
-                                            alt="logo-image"
-                                            className="rounded"
-                                            width={112}
-                                            height={68}
-                                        />
-                                    )}
-                                    {!company?.logo_path && (
-                                        <div className={"no-image"}>
-                                            {company ? 'no poster available' : 'Loading ...'}
-                                        </div>
-                                    )}
-                                    <div className={"read-more-list-li-a"}>    {company.name}</div>
-                                </li>
-                            ))
+
+                    {data?.production_companies?.length > 0 &&
+
+                        <>
+                            {data?.production_companies?.length > 3 &&
+                                <ul className={"read-more-list-ul"}>
+                                    <Slider {...SliderSettings}>
+                                        {data?.production_companies?.map((company: {
+                                            id: React.Key | null | undefined;
+                                            logo_path: any;
+                                            name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined;
+                                        }) => (
+                                            <li key={company.id} className={"read-more-list-li"}>
+                                                {company?.logo_path && (
+                                                    <img
+                                                        src={`https://image.tmdb.org/t/p/w400/${company?.logo_path}`}
+                                                        alt="logo-image"
+                                                        className="rounded"
+                                                        width={112}
+                                                        height={68}
+                                                    />
+                                                )}
+                                                {!company?.logo_path && (
+                                                    <div className={"no-image"}>
+                                                        {company ? 'no poster available' : 'Loading ...'}
+                                                    </div>
+                                                )}
+                                                <div className={"read-more-list-li-a"}>    {company.name}</div>
+                                            </li>
+                                        ))
+                                        }
+                                    </Slider>
+                                    <div
+                                        className={"not-data"}>  {data.production_companies.length <= 0 && " Not yet available.."}</div>
+                                </ul>
                             }
-                        </ul>
+                        </>
+                    }
+                    {data?.production_companies?.length > 0 &&
+
+                        <>
+                            {data?.production_companies?.length <= 3 &&
+                                <ul className={"read-more-list-ul company-list"}>
+                                    {data.production_companies.map((company: {
+                                        id: React.Key | null | undefined;
+                                        logo_path: any;
+                                        name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined;
+                                    }) => (
+                                        <li key={company.id} className={"read-more-list-li"}>
+                                            {company?.logo_path && (
+                                                <img
+                                                    src={`https://image.tmdb.org/t/p/w400/${company?.logo_path}`}
+                                                    alt="logo-image"
+                                                    className="rounded"
+                                                    width={112}
+                                                    height={68}
+                                                />
+                                            )}
+                                            {!company?.logo_path && (
+                                                <div className={"no-image"}>
+                                                    {company ? 'no poster available' : 'Loading ...'}
+                                                </div>
+                                            )}
+                                            <div className={"read-more-list-li-a"}>    {company.name}</div>
+                                        </li>
+                                    ))
+                                    }
+                                </ul>
+                            }
+                        </>
                     }
                 </div>
             </div>
