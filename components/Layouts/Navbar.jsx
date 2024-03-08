@@ -3,16 +3,16 @@ import React, {useEffect} from 'react';
 import Link from "next/link";
 
 const Navbar = () => {
-    
+
    //#region scroll Navigation function
 
     useEffect(() => {
         const handleScroll = () => {
-            const headerNav = document.querySelector('.nav');
+            const headerNav = document.querySelector('.desktop-nav');
             if (window.scrollY > 60) {
-                headerNav.classList.add('scrolled');
+                headerNav?.classList?.add('scrolled');
             } else {
-                headerNav.classList.remove('scrolled');
+                headerNav?.classList?.remove('scrolled');
             }
         };
 
@@ -22,32 +22,58 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    
+
     //#endregion
 
 
+    function handleClick() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
     return (
-            <div className={"nav"}>
+        <div style={{position:"relative"}}>
+            {/* desktop navbar */}
+            <div className={"desktop-nav"}>
                 <div className="header__nav">
                     <div className={"container"}>
                         <div className={"content-container"}>
-                        <div className="header__nav__content">
-                            <div className={"header__nav__content__container"}>
-                                <div className={"header__nav__content__container__left"}>
-                                    <Link href={"/"}><span>Logo</span></Link>
-                                </div>
-                                <div className={"header__nav__content__container__right"}>
-                                    <ul>
-                                        <li><Link href={"/"}>Popular TV Series</Link></li>
-                                        <li><Link href={"/"}>Popular Movies</Link></li>
-                                    </ul>
+                            <div className="header__nav__content">
+                                <div className={"header__nav__content__container"}>
+                                    <div className={"header__nav__content__container__left"}>
+                                        <Link href={"/"}><span>Logo</span></Link>
+                                    </div>
+                                    <div className={"header__nav__content__container__right"}>
+                                        <ul>
+                                            <li><Link href={"/"}>Popular TV Series</Link></li>
+                                            <li><Link href={"/"}>Popular Movies</Link></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {/* mobile navbar */}
+            <div className="mobile-nav">
+                <div className={"mobile-nav__logo"}>
+                    Logo
+                </div>
+                <input id="menu-toggle" type="checkbox"/>
+                <label className='menu-button-container' htmlFor="menu-toggle">
+                    <div className='menu-button'></div>
+                </label>
+                <ul className="menu">
+                    <li><Link href={"/"}>Popular TV Series</Link></li>
+                    <li><Link href={"/"}>Popular Movies</Link></li>
+                </ul>
+            </div>
+        </div>
     );
 };
 
