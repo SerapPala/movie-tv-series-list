@@ -3,6 +3,8 @@ footer {
 }
 .footer {
   &__content {
+    margin-left:45px;
+    margin-right: 45px;
    @include flexBetweeen;
     height: 75px;
     .designer {
@@ -27,3 +29,9 @@ footer {
     }
   }
 }
+@media only screen and (min-width: 1024px) {
+  .footer {
+    &__content {
+      margin-left:45px;
+      margin-right: 45px; }
+  } }
