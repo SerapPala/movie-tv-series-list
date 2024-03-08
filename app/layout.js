@@ -1,5 +1,4 @@
 import {  Montserrat } from "next/font/google";
-import Header from "../components/Layouts/Header";
 import Footer from "../components/Layouts/Footer";
 
 //#region font definitions
