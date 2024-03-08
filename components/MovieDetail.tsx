@@ -55,7 +55,7 @@ const MovieDetail = ({data}) => {
         }
 
         const totalStars = Math.floor(voteAverage);
-        for (let i = totalStars + 1; i <= 10; i++) {
+        for (let i = totalStars + 1; i < 10; i++) {
             stars += '☆';
         }
 
