@@ -32,9 +32,34 @@ const Header = () => {
 
     const [popularTvSeries, setPopularTvSeries] = useState([]);
 
+    const  SliderSettings = {
+        infinite: true,
+        speed: 3000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        pagination: true,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                },
+            }
+        ],
+    };
+
     //#endregion
 
     //#region getData functions
+
 
     useEffect(() => {
         const fetchPopularMovies = async () => {
@@ -61,24 +86,6 @@ const Header = () => {
         fetchPopularTvSeries();
     }, []);
 
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const headerNav = document.querySelector('.nav');
-            if (window.scrollY > 60) {
-                headerNav.classList.add('scrolled');
-            } else {
-                headerNav.classList.remove('scrolled');
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     //#endregion
 
         return (
@@ -98,7 +105,7 @@ const Header = () => {
                             </div>
                         </div>
                         <div className={'header__content__right'}>
-                            <MovieCard dataType={"popularTvSeries"}  movie={popularTvSeries[Math.floor(Math.random() * popularTvSeries.length)]} type={'header'}/>
+                            <MovieCard dataType={"popularTvSeries"}  movie={popularTvSeries[Math.floor(Math.random() * popularTvSeries.length)]}  type={'header'}/>
                         </div>
                     </div>
                     <div className={'header__contentMobile'}>
@@ -108,12 +115,23 @@ const Header = () => {
                                 <h1>World of TV Series & Movies</h1>
                             </div>
                         </div>
-                        <MovieCard dataType={"popularTvSeries"}  movie={popularTvSeries[Math.floor(Math.random() * popularTvSeries.length)]} type={'header'}/>
+                        <Slider {...SliderSettings}>
+                            <div className={"slider-item"}>
+                                <MovieCard dataType={"popularMovies"}
+                                           movie={popularMovies[Math.floor(Math.random() * popularMovies.length)]}
+                                           type={'header'}/>
+                            </div>
+                            <div className={"slider-item"}>
+                                <MovieCard dataType={"popularTvSeries"}
+                                           movie={popularTvSeries[Math.floor(Math.random() * popularTvSeries.length)]}
+                                           type={'header'}/>
+                            </div>
+                        </Slider>
                     </div>
                 </div>
             </header>
         </div>
-    );
+        );
 };
 
 export default Header;
