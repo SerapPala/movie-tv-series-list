@@ -26,7 +26,7 @@ const options = {
 
 async function getData(id) {
     const url = await fetch(
-        `${API_URL}movie/${id}?language=en-US`,
+        `${API_URL}movie/${id}?language=en-US&include_adult=false`,
         options,
     );
     return url.json();
