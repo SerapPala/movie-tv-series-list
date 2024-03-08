@@ -1,12 +1,10 @@
 import React from 'react';
 import Link from "next/link";
 
-
 const Footer = () => {
 
     return (
-        <footer className={"footer"}>
-
+        <footer className={"footer container"}>
                 <div className={"content-container"}>
                     <div className={"footer__content"}>
                         <div className={"designer"}>
@@ -26,8 +24,7 @@ const Footer = () => {
                     </div>
                 </div>
         </footer>
-    )
-        ;
+    );
 };
 
 export default Footer;
