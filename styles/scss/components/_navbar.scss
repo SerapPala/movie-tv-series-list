@@ -54,14 +54,15 @@
   z-index: 99999!important;
   transition: top 0.1s ease-in-out;
   border-radius: $borderRadiusContent;
-  backdrop-filter:$backdropFilter;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+  background:$purple58;
+  opacity: 1;
   @include flexBetweeen;
   color: #FFF;
   height: 60px;
   padding: 1em;
+  margin-bottom: 20px !important;
   &__logo{
-    color:$purple58;
+    color:$white;
     font-size: 25px;
     font-weight: 500;
     line-height: 30px;
@@ -74,7 +75,7 @@
   margin: 0;
   padding: 0;
   a {
-    color:$purple180!important;
+    color:$purple58!important;
   }
 }
 .menu > li {
@@ -162,7 +163,7 @@
     padding: 0.5em 0;
     width: 100%;
     @include MenuLinkText;
-    background: $black;
+    background: $white;
     color:$purple180!important;
 
   }
