@@ -183,15 +183,9 @@
   .mobile-nav {
     display: none;
   }}@media only screen and (max-width:1024px) {
-  .desktop-nav{
-    top:80px;
-  }
   .header__nav{
     &__content {
-
       margin-right: 0px;
       margin-left: 0px;
-
-
     }}}
 
