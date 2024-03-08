@@ -14,7 +14,7 @@ border-radius:$borderRadiusContent;
     width: 100%;
     @include  flexBetweeen;
     gap: 10px;
-    max-width: 580px;
+max-width: 950px;
     margin-bottom:45px;
     &__genre {
       background: $purple180;
