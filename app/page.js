@@ -99,7 +99,7 @@ export default function SimpleSlider() {
            <Header/>
          <div className={"section-content"}>
              <div className={"content-container"}>
-                 <section className={"section"}>
+                 <section className={"section"} id={"popular-movies"}>
                      <h2 className={"title"}>
                          Popular Movies
                      </h2>
@@ -111,7 +111,7 @@ export default function SimpleSlider() {
                          ))}
                      </Slider>
                  </section>
-                 <section className={"section"}>
+                 <section className={"section"} id={"popular-tv-series"}>
                      <h2 className={"title"}>
                          Popular TV Series
                      </h2>
