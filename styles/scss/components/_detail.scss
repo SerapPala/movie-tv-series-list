@@ -149,6 +149,7 @@ a{
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
   .detail-section{
+   margin-top:105px;
     &__image{
       height: 340px;
 
