@@ -28,7 +28,7 @@ const options = {
 //#region getData functions
 
 async function fetchPopularMovies() {
-    const response = await fetch(`${API_URL}movie/popular?language=en-US&page=1`, options);
+    const response = await fetch(`${API_URL}movie/popular?include_adult=false&language=en-US&page=1`, options);
     const data = await response.json();
     return data.results;
 }
@@ -66,7 +66,7 @@ export default function SimpleSlider() {
                 },
             },
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
                 },
@@ -97,32 +97,35 @@ export default function SimpleSlider() {
     return (
      <div>
            <Header/>
-         <div className={"content-container"}>
-             <section className={"section"}>
-                 <h2 className={"title"}>
-                     Popular Movies
-                 </h2>
-                 <Slider {...SliderSettings}>
-                     {popularMovies.map(movie => (
-                         <div key={movie.id} className="slider-item">
-                             <MovieCard movie={movie} />
-                         </div>
-                     ))}
-                 </Slider>
-             </section>
-             <section className={"section"}>
-                 <h2 className={"title"}>
-                     Popular TV Series
-                 </h2>
-                 <Slider {...SliderSettings}>
-                     {popularTvSeries.map(series => (
-                         <div key={series.id} className="slider-item">
-                             <MovieCard movie={series} />
-                         </div>
-                     ))}
-                 </Slider>
-             </section>
+         <div className={"section-content"}>
+             <div className={"content-container"}>
+                 <section className={"section"}>
+                     <h2 className={"title"}>
+                         Popular Movies
+                     </h2>
+                     <Slider {...SliderSettings}>
+                         {popularMovies?.map(movie => (
+                             <div key={movie.id} className="slider-item">
+                                 <MovieCard movie={movie}/>
+                             </div>
+                         ))}
+                     </Slider>
+                 </section>
+                 <section className={"section"}>
+                     <h2 className={"title"}>
+                         Popular TV Series
+                     </h2>
+                     <Slider {...SliderSettings}>
+                         {popularTvSeries?.map(series => (
+                             <div key={series.id} className="slider-item">
+                                 <MovieCard movie={series}/>
+                             </div>
+                         ))}
+                     </Slider>
+                 </section>
+             </div>
          </div>
+
      </div>
     );
 }
