@@ -41,3 +41,10 @@
   font-weight: 700;
   line-height: 20px;
 }
+@mixin MenuLinkText{
+  color: rgb(112, 124, 180);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+}
