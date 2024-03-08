@@ -72,17 +72,12 @@ h1 {
   margin:67px 0px;
 }
 /* Media query for mobile devices */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .section {
-    padding:  60px 45px 60px 45px;
+    padding:  0px 45px 60px 45px;
   }
 }
-@media only screen and (max-width: 768px) {
-  .section {
 
-    padding:  165px 0px 45px 0px;
-  }
-}
 @media only screen and (min-width: 768px)  {
   .content-container {
     margin:0px 45px;
@@ -92,12 +87,8 @@ h1 {
   .content-container {
     margin:0px 30px;
 
-
   }}
 @media only screen and (max-width: 475px) {
-  .section {
-    padding:  60px 0px 0px 0px;
-  }
   .section-content {
       margin:90px 0px;
     }
@@ -109,6 +100,7 @@ button{
   border:none!important;
   cursor: pointer;
 }
+
 
 /* the slides */
 .slick-slider {
