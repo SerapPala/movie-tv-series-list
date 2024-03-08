@@ -38,6 +38,9 @@ const Page = async ({ params }) => {
     const data = await getData(params.id);
     return (
         <section className={"content-container"}>
+  <div className={"detail_nav"}>
+                <Navbar />
+            </div>
             <MovieDetail data={data} />
         </section>
     );
