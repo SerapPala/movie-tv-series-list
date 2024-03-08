@@ -8,7 +8,8 @@ position:relative;
   @include baseBoldText;
     border-radius: $borderRadiusHeader;
   background: $purple58;
-  padding:7px 25px
+    width: 93px;
+    height: 34px;
 }}
   &__body{
     width: 100%;
@@ -17,7 +18,7 @@ position:relative;
       border-radius: $borderRadius;
     }
     img{
-      height: 433px;
+      height: 383px;
     }
     &__content {
       @include absoluteContent;
@@ -34,29 +35,33 @@ position:relative;
     }
   }
 }
-/* Media query for mobile devices */
-@media only screen and (min-width: 475px) and (max-width: 1024px) {
-  .movie-card {
-    &__body{
-      img{
-        height: 333px;
-      }}}
-}
-@media only screen and (max-width: 475px)  {
-  .movie-card {
-    &__body{
-      img{
-        height: 380px;
-      }}}
-}
+
 .no-image-poster-movie-card {
   width: 100%;
-  height: 400px;
+  height:383px;
   background: #b4b4b6;
   font-size:14px;
   color: #7a7a7c;
   text-align: center;
-  border-radius:4px;
+  border-radius:$borderRadiusContent;
   @include flexCenter;
 }
 
+@media only screen and (max-width: 768px) {
+  .movie-card__body img {
+    height: 390px;
+  }
+  .no-image-poster-movie-card {
+    width: 100%;
+    height:390px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px)  {
+  .movie-card__body img {
+    height: 320px;
+  }
+  .no-image-poster-movie-card {
+    width: 100%;
+    height:320px;
+  }
+}
