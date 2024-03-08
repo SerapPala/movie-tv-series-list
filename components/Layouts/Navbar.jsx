@@ -49,8 +49,8 @@ const Navbar = () => {
                                     </div>
                                     <div className={"header__nav__content__container__right"}>
                                         <ul>
-                                            <li><Link href={"/"}>Popular TV Series</Link></li>
-                                            <li><Link href={"/"}>Popular Movies</Link></li>
+                                            <li><Link href={"#popular-tv-series"}>Popular TV Series</Link></li>
+                                            <li><Link href={"#popular-movies"}>Popular Movies</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -69,8 +69,8 @@ const Navbar = () => {
                     <div className='menu-button'></div>
                 </label>
                 <ul className="menu">
-                    <li><Link href={"/"}>Popular TV Series</Link></li>
-                    <li><Link href={"/"}>Popular Movies</Link></li>
+                    <li><Link  href={"#popular-tv-series"}>Popular TV Series</Link></li>
+                    <li><Link  href={"#popular-movies"}>Popular Movies</Link></li>
                 </ul>
             </div>
         </div>
