@@ -65,7 +65,7 @@ const Navbar = ({type}) => {
             {/* mobile navbar */}
             <div className="mobile-nav">
                 <div className={"mobile-nav__logo"}>
-                    Logo
+                    <Link href={"/"}>Logo</Link>
                 </div>
                 <input id="menu-toggle" type="checkbox"/>
                 <label className='menu-button-container' htmlFor="menu-toggle">
